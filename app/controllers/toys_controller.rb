@@ -35,7 +35,8 @@ class ToysController < ApplicationController
   end
 
   def destroy
-    Toy.find(params[:id]).destroy
+    @toy = Toy.find(params[:id])
+    @toy.destroy
     redirect_to :action => "index"
   end
 end

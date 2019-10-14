@@ -3,4 +3,7 @@
 <p><%= @toy["description"] %></p>
 
 <%= link_to 'Edit', edit_toy_path %>
+<%= link_to 'Delete', toy_path(@toy),
+    method: :delete,
+    data: { confirm: "Are you sure?" }%>
 <%= link_to 'Back', toys_path %>
