@@ -21,4 +21,16 @@ class ToysController < ApplicationController
 
     redirect_to :action => "index"
   end
+
+  def edit
+    @toy = Toy.find(params[:id])
+  end
+
+  def update
+    @toy = Toy.find(params[:id])
+    @toy.update(params.require(:toy).permit(:name, :description))
+    p params[:toy]
+
+    redirect_to :action => "index"
+  end
 end

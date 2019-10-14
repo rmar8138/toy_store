@@ -1,0 +1,12 @@
+<form action="<%= toy_path(params[:id]) %>" method="POST">
+  <input type="hidden" value="<%= form_authenticity_token %>" name="authenticity_token">
+  <input type="hidden" name="_method" value="put">
+
+  <label for="name">Name</label>
+  <input id="name" type="text" name="toy[name]" value="<%= @toy.name %>">
+
+  <label for="description">Description</label>
+  <textarea name="toy[description]" id="description" cols="30" rows="10"><%= @toy.description %></textarea>
+
+  <button>Submit</button>
+</form>
