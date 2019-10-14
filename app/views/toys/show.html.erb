@@ -1,1 +1,6 @@
-<%= @toy.to_json %>
+<h1><%= @toy["name"] %></h1>
+<p><%= @toy["post_date"] %></p>
+<p><%= @toy["description"] %></p>
+
+<%= link_to 'Edit', edit_toy_path %>
+<%= link_to 'Back', toys_path %>

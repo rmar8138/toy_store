@@ -31,6 +31,11 @@ class ToysController < ApplicationController
     @toy.update(params.require(:toy).permit(:name, :description))
     p params[:toy]
 
+    redirect_to toy_url(@toy)
+  end
+
+  def destroy
+    Toy.find(params[:id]).destroy
     redirect_to :action => "index"
   end
 end

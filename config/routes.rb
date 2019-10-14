@@ -20,4 +20,5 @@ Rails.application.routes.draw do
   patch "/toys/:id", to: "toys#update"
 
   # DELETE toy by id
+  delete "/toys/:id", to: "toys#destroy"
 end
