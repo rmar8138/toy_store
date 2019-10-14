@@ -5,3 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+for i in 1..20
+  Toy.create(
+    name: Faker::Superhero.name,
+    description: Faker::Lorem.sentence(word_count: 20, random_words_to_add: 180),
+    post_date: Faker::Date.in_date_period,
+  )
+  puts "Created #{i} toy(s)"
+end
