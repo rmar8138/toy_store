@@ -10,6 +10,15 @@
   </head>
 
   <body>
+    <h1>Toy Store</h1>
+    <ul>
+      <li>
+        <%= link_to 'New User', new_user_path %>
+      </li>
+      <li>
+        <%= link_to 'New Toy Listing', new_toy_path %>
+      </li>
+    </ul>
     <%= yield %>
   </body>
 </html>

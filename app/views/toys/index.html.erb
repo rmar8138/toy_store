@@ -1,7 +1,5 @@
 <h1>Toys Listings</h1>
 
-<%= link_to 'Add new listing', new_toy_path %>
-
 <% @toys.each do |toy| %>
   <div>
     <h2><%= toy["name"] %></h2>

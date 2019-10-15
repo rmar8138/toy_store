@@ -1,0 +1,12 @@
+<form action="<%= user_path(params[:id]) %>" method="POST">
+  <input type="hidden" value="<%= form_authenticity_token %>" name="authenticity_token">
+  <input type="hidden" name="_method" value="put">
+
+  <label for="email">Email</label>
+  <input id="email" type="email" name="user[email]" value="<%= @user.email %>">
+
+  <label for="password">Password</label>
+  <input id="password" type="password" name="user[password]" value="<%= @user.password %>">
+
+  <button>Submit</button>
+</form>
