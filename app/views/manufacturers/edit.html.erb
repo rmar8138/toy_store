@@ -1,0 +1,12 @@
+<form action="<%= manufacturer_path(params[:id]) %>" method="POST">
+  <input type="hidden" value="<%= form_authenticity_token %>" name="authenticity_token">
+  <input type="hidden" name="_method" value="put">
+
+  <label for="name">Name</label>
+  <input id="name" type="name" name="manufacturer[name]" value="<%= @manufacturer.name %>">
+
+  <label for="location">Location</label>
+  <input id="location" type="location" name="manufacturer[location]" value="<%= @manufacturer.location %>">
+
+  <button>Submit</button>
+</form>

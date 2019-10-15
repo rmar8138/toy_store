@@ -1,0 +1,11 @@
+<%= link_to 'Create new manufacturer', new_manufacturer_path %>
+
+<ul>
+  <% @manufacturers.each do |manufacturer| %>
+    <li>
+      <h2><%= manufacturer.name %></h2>
+      <h3><%= manufacturer.location %></h3>
+      <%= link_to 'See manufacturer', manufacturer_path(manufacturer) %>
+    </li>
+  <% end %>
+</ul>

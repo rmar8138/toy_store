@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+  ########
+  # TOYS #
+  ########
+
   # GET all toys
   get "/toys", to: "toys#index", as: "toys"
 
@@ -22,6 +27,10 @@ Rails.application.routes.draw do
   # DELETE toy by id
   delete "/toys/:id", to: "toys#destroy"
 
+  #########
+  # USERS #
+  #########
+
   # POST new users
   post "/users", to: "users#create", as: "users"
 
@@ -40,4 +49,30 @@ Rails.application.routes.draw do
 
   # DELETE user by id
   delete "/users/:id", to: "users#destroy"
+
+  #################
+  # MANUFACTURERS #
+  #################
+
+  # GET all manufacturers
+  get "/manufacturers", to: "manufacturers#index", as: "manufacturers"
+
+  # POST new manufacturer
+  post "/manufacturers", to: "manufacturers#create"
+
+  # GET new manufacturer form page
+  get "/manufacturers/new", to: "manufacturers#new", as: "new_manufacturer"
+
+  # GET manufacturer by id
+  get "/manufacturers/:id", to: "manufacturers#show", as: "manufacturer"
+
+  # GET edit manufacturer form page
+  get "/manufacturers/:id/edit", to: "manufacturers#edit", as: "edit_manufacturer"
+
+  # PUT manufacturer by id
+  put "/manufacturers/:id", to: "manufacturers#update"
+  patch "/manufacturers/:id", to: "manufacturers#update"
+
+  # DELETE manufacturer by id
+  delete "/manufacturers/:id", to: "manufacturers#destroy"
 end
