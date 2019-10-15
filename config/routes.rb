@@ -15,10 +15,26 @@ Rails.application.routes.draw do
   # GET edit toy form page
   get "/toys/:id/edit", to: "toys#edit", as: "edit_toy"
 
-  # PUT new toy
+  # PUT toy by id
   put "/toys/:id", to: "toys#update"
   patch "/toys/:id", to: "toys#update"
 
   # DELETE toy by id
   delete "/toys/:id", to: "toys#destroy"
+
+  # POST new users
+  post "/users", to: "users#create", as: "users"
+
+  # GET new user form page
+  get "/users/new", to: "users#new", as: "new_user"
+
+  # GET user by id
+  get "/users/:id", to: "users#show", as: "user"
+
+  # GET edit user page
+  get "/users/:id/edit", to: "users#edit", as: "edit_user"
+
+  # PUT user by id
+
+  # DELETE user by id
 end
